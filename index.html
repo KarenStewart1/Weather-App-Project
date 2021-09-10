@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="card">
+          <div class="card-body">
+            <h1>
+              <div class="row">
+                <div class="col" id="city-name-element">Amsterdam</div>
+                <div class="col calender-day">
+                  <span id="date-month-year"></span>
+                  <div class="col date-today" id="day-and-time"></div>
+                </div>
+              </div>
+            </h1>
+            <br />
+            <span class="circle">
+              <div class="row weather-today">
+                <div class="col">
+                  <img
+                    src="images/partly_cloudy.png"
+                    alt="partly-cloudy"
+                    width="110"
+                  />
+                  <h2>
+                    <span id="current-temperature">17</span>
+                    <a href="#" class="celsius" id="celsius-link">°C </a>|
+                    <a href="#" id="fahrenheit" class="fahrenheit"> °F</a>
+                  </h2>
+                </div>
+                <div class="weather-type" id="today-weather-description">
+                  Partly cloudy
+                </div>
+                <p>
+                  <span class="low" id="today-low">12</span>° /
+                  <span class="high" id="today-high">19</span>°
+                </p>
+              </div>
+            </span>
+
+            <br />
+            <form id="city-search-form">
+              <div class="row search-buttons">
+                <div class="col-4">
+                  <input
+                    type="search"
+                    class="enter-city-name form-control shadow-sm"
+                    id="city-search-input"
+                    placeholder="Enter city name"
+                    autofocus="on"
+                    autocomplete="off"
+                    size="30"
+                  />
+                </div>
+                <div class="col-1">
+                  <input type="submit" value="Search" class="shadow-sm" />
+                </div>
+                <div class="col-3">
+                  <button
+                    class="current-location-button shadow-sm"
+                    id="current-location-button"
+                  >
+                    Current Location
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="row five-day-forecast">
+              <div class="row-2 circular">
+                <div class="col day">
+                  <strong>Tuesday</strong>
+                  <div class="col">Rainy</div>
+                  <div class="col">
+                    <img src="images/rainy.png" alt="rainy" /> 15°C
+                    <div class="col low">12°C</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-2 circular">
+                <div class="col day">
+                  <strong>Wednesday</strong>
+                  <div class="col">Partly cloudy</div>
+                  <div class="col">
+                    <img src="images/partly_cloudy.png" alt="partly-cloudy" />
+                    17°C
+                    <div class="col low">15°C</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-2 circular">
+                <div class="col day">
+                  <strong>Thursday</strong>
+                  <div class="col">Sunny</div>
+                  <div class="col">
+                    <img src="images/sunny.png" alt="sunny" /> 21°C
+                    <div class="col low">17°C</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-2 circular">
+                <div class="col day">
+                  <strong> Friday </strong>
+                  <div class="col">Partly cloudy</div>
+                  <div class="col">
+                    <img src="images/partly_cloudy.png" alt="partly-cloudy" />
+                    20°C
+                    <div class="col low">15°C</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-2 circular">
+                <div class="col day">
+                  <strong> Saturday</strong>
+                  <div class="col">Rainy</div>
+                  <div class="col">
+                    <img src="images/rainy.png" alt="rainy" /> 15°C
+                    <div class="col low">12°C</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
