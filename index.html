@@ -35,30 +35,41 @@
               </div>
             </h1>
             <br />
-            <span class="circle">
-              <div class="row weather-today">
+            <div class="row weather-today big-circle">
+              <div class="row-1 inner-circle temp-info">
                 <div class="col">
                   <img
                     src="images/partly_cloudy.png"
                     alt="partly-cloudy"
                     width="110"
                   />
-                  <h2>
-                    <span id="current-temperature">17</span>
-                    <a href="#" class="celsius" id="celsius-link">°C </a>|
-                    <a href="#" id="fahrenheit" class="fahrenheit"> °F</a>
-                  </h2>
                 </div>
-                <div class="weather-type" id="today-weather-description">
+                <div class="col weather-type" id="today-weather-description">
                   Partly cloudy
                 </div>
-                <p>
-                  <span class="low" id="today-low">12</span>° /
-                  <span class="high" id="today-high">19</span>°
-                </p>
+                <div class="col">
+                  <p>
+                    <span class="low" id="today-low">12</span>° /
+                    <span class="high" id="today-high">19</span>°
+                  </p>
+                </div>
               </div>
-            </span>
-
+              <div class="row-1 inner-circle weather-info">
+                <div class="col">
+                  <div class="col">
+                    <h2>
+                      <span id="current-temperature">17</span>
+                      <a href="#" class="celsius" id="celsius-link">°C </a>|
+                      <a href="#" id="fahrenheit" class="fahrenheit"> °F</a>
+                    </h2>
+                  </div>
+                  <ul class="weather-stats">
+                    <li>Humidity: 10%</li>
+                    <li>Wind: 2km/h</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <br />
             <form id="city-search-form">
               <div class="row search-buttons">
@@ -87,7 +98,7 @@
               </div>
             </form>
             <div class="row five-day-forecast">
-              <div class="row-2 circular">
+              <div class="row-2 little-circles">
                 <div class="col day">
                   <strong>Tuesday</strong>
                   <div class="col">Rainy</div>
@@ -97,7 +108,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row-2 circular">
+              <div class="row-2 little-circles">
                 <div class="col day">
                   <strong>Wednesday</strong>
                   <div class="col">Partly cloudy</div>
@@ -108,7 +119,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row-2 circular">
+              <div class="row-2 little-circles">
                 <div class="col day">
                   <strong>Thursday</strong>
                   <div class="col">Sunny</div>
@@ -118,7 +129,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row-2 circular">
+              <div class="row-2 little-circles">
                 <div class="col day">
                   <strong> Friday </strong>
                   <div class="col">Partly cloudy</div>
@@ -129,7 +140,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row-2 circular">
+              <div class="row-2 little-circles">
                 <div class="col day">
                   <strong> Saturday</strong>
                   <div class="col">Rainy</div>

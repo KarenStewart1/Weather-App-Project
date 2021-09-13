@@ -22,27 +22,38 @@ h1 {
   font-size: 32px;
   font-weight: 200;
 }
-.circle {
+.temp-info {
+  font-size: 25px;
+}
+.big-circle {
   border: 3px solid;
   border-color: #ff895d;
   border-radius: 50%;
-  height: 245px;
-  width: 280px;
-  display: block;
-  margin: 0 auto;
-}
-h2 {
-  font-size: 28px;
-}
-.weather-today {
   font-family: "Open Sans", sans-serif;
-  position: relative;
-  display: block;
+  height: 290px;
+  width: 340px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
 }
-.weather-today {
-  font-size: 20px;
+.weather-stats {
+  font-size: 13px;
+  padding-top: 40px;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 34px;
+  padding-top: 30px;
+}
+.weather-info {
+  padding-left: 0;
 }
 .fahrenheit,
 .celsius {
@@ -68,11 +79,6 @@ h2 {
   padding: 0;
   width: 320px;
 }
-.col-7 {
-  width: 400px;
-  padding-right: 0;
-  margin-left: 20px;
-}
 .day {
   font-family: "Open Sans", sans-serif;
 }
@@ -86,15 +92,18 @@ h2 {
 strong {
   font-size: 17px;
 }
-.circular {
+.little-circles {
   border: 2px solid;
   border-color: #ff895d;
   border-radius: 50%;
-  height: 150px;
   margin-left: 15px;
   margin-right: 15px;
   padding: 15px;
   text-align: center;
+  height: 150px;
+  width: 150px;
+}
+.inner-circle {
   width: 150px;
 }
 .low {
