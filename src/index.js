@@ -102,7 +102,7 @@ function getCurrentLocation() {
 let citySearchForm = document.querySelector("#city-search-form");
 citySearchForm.addEventListener("submit", getCityName);
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", getFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");

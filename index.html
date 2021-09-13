@@ -30,13 +30,13 @@
                 <div class="col" id="city-name-element">Amsterdam</div>
                 <div class="col calender-day">
                   <span id="date-month-year"></span>
-                  <div class="col date-today" id="day-and-time"></div>
+                  <div class="col day-and-time" id="day-and-time"></div>
                 </div>
               </div>
             </h1>
             <br />
-            <div class="row weather-today big-circle">
-              <div class="row-1 inner-circle temp-info">
+            <div class="row big-circle">
+              <div class="row-1 inner-circle">
                 <div class="col">
                   <img
                     src="images/partly_cloudy.png"
@@ -44,7 +44,10 @@
                     width="110"
                   />
                 </div>
-                <div class="col weather-type" id="today-weather-description">
+                <div
+                  class="col today-weather-description"
+                  id="today-weather-description"
+                >
                   Partly cloudy
                 </div>
                 <div class="col">
@@ -54,16 +57,20 @@
                   </p>
                 </div>
               </div>
-              <div class="row-1 inner-circle weather-info">
+              <div class="row-1 inner-circle right-side">
                 <div class="col">
                   <div class="col">
                     <h2>
                       <span id="current-temperature">17</span>
-                      <a href="#" class="celsius" id="celsius-link">°C </a>|
-                      <a href="#" id="fahrenheit" class="fahrenheit"> °F</a>
+                      <span class="cf-symbol">
+                        <a href="#" class="celsius" id="celsius-link">°C </a>|
+                        <a href="#" class="fahrenheit" id="fahrenheit-link">
+                          °F</a
+                        ></span
+                      >
                     </h2>
                   </div>
-                  <ul class="weather-stats">
+                  <ul>
                     <li>Humidity: 10%</li>
                     <li>Wind: 2km/h</li>
                   </ul>
@@ -72,8 +79,8 @@
             </div>
             <br />
             <form id="city-search-form">
-              <div class="row search-buttons">
-                <div class="col-4">
+              <div class="row search-buttons-bar">
+                <div class="col-4 search-bar">
                   <input
                     type="search"
                     class="enter-city-name form-control shadow-sm"
@@ -81,7 +88,6 @@
                     placeholder="Enter city name"
                     autofocus="on"
                     autocomplete="off"
-                    size="30"
                   />
                 </div>
                 <div class="col-1">
@@ -99,8 +105,8 @@
             </form>
             <div class="row five-day-forecast">
               <div class="row-2 little-circles">
-                <div class="col day">
-                  <strong>Tuesday</strong>
+                <div class="col">
+                  <span class="day">Tuesday</span>
                   <div class="col">Rainy</div>
                   <div class="col">
                     <img src="images/rainy.png" alt="rainy" /> 15°C
@@ -109,8 +115,8 @@
                 </div>
               </div>
               <div class="row-2 little-circles">
-                <div class="col day">
-                  <strong>Wednesday</strong>
+                <div class="col">
+                  <span class="day">Wednesday</span>
                   <div class="col">Partly cloudy</div>
                   <div class="col">
                     <img src="images/partly_cloudy.png" alt="partly-cloudy" />
@@ -120,8 +126,8 @@
                 </div>
               </div>
               <div class="row-2 little-circles">
-                <div class="col day">
-                  <strong>Thursday</strong>
+                <div class="col">
+                  <span class="day">Thursday</span>
                   <div class="col">Sunny</div>
                   <div class="col">
                     <img src="images/sunny.png" alt="sunny" /> 21°C
@@ -130,8 +136,8 @@
                 </div>
               </div>
               <div class="row-2 little-circles">
-                <div class="col day">
-                  <strong> Friday </strong>
+                <div class="col">
+                  <span class="day">Friday</span>
                   <div class="col">Partly cloudy</div>
                   <div class="col">
                     <img src="images/partly_cloudy.png" alt="partly-cloudy" />
@@ -141,8 +147,8 @@
                 </div>
               </div>
               <div class="row-2 little-circles">
-                <div class="col day">
-                  <strong> Saturday</strong>
+                <div class="col">
+                  <span class="day">Saturday</span>
                   <div class="col">Rainy</div>
                   <div class="col">
                     <img src="images/rainy.png" alt="rainy" /> 15°C

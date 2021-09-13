@@ -1,65 +1,70 @@
 .weather-app {
   margin-top: 20px auto;
-  max-width: 1500px;
+  max-width: 1200px;
 }
 .card {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
 }
 body {
-  max-width: 100%;
   margin: 70px;
+  max-width: 100%;
+  font-family: "Open Sans", sans-serif;
 }
+
 h1 {
   font-family: "Work Sans", sans-serif;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 600;
 }
 .calender-day {
   text-align: right;
 }
-.date-today,
-.country {
-  font-size: 32px;
+.day-and-time {
   font-weight: 200;
-}
-.temp-info {
-  font-size: 25px;
 }
 .big-circle {
   border: 3px solid;
   border-color: #ff895d;
   border-radius: 50%;
-  font-family: "Open Sans", sans-serif;
-  height: 290px;
-  width: 340px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 40px;
-  padding-right: 10px;
-  padding-left: 10px;
   display: flex;
+  height: 260px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  text-align: center;
+  width: 330px;
 }
-.weather-stats {
-  font-size: 13px;
-  padding-top: 40px;
-  text-align: left;
+.inner-circle {
+  width: 150px;
+  height: 180px;
 }
-ul {
-  list-style-type: none;
+.today-weather-description {
+  font-size: 20px;
 }
-
-h2 {
-  font-size: 34px;
-  padding-top: 30px;
+.low {
+  color: #007cb9;
 }
-.weather-info {
+.high {
+  color: #ff895d;
+}
+.right-side {
   padding-left: 0;
+}
+h2 {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+#current-temperature {
+  font-size: 52px;
+  vertical-align: top;
+}
+.cf-symbol {
+  font-size: 22px;
 }
 .fahrenheit,
 .celsius {
   color: #007cb9;
-  font-size: 28px;
-  line-height: 1.2;
   padding: 0;
   text-decoration: none;
 }
@@ -67,48 +72,46 @@ h2 {
 .celsius:hover {
   text-decoration: underline;
 }
+ul {
+  list-style-type: none;
+  font-size: 14px;
+  padding-top: 25px;
+  color: grey;
+  padding-left: 30px;
+  padding-top: 0;
+  text-align: left;
+}
+.search-buttons-bar {
+  line-height: 1.9;
+  margin-left: 375px;
+}
+.search-bar {
+  padding: 0;
+  width: 320px;
+}
 .current-location-button {
   border-width: 1px;
   border-radius: 4px;
 }
-.search-buttons {
-  margin-left: 375px;
-  line-height: 1.9;
-}
-.col-4 {
-  padding: 0;
-  width: 320px;
-}
-.day {
-  font-family: "Open Sans", sans-serif;
-}
 .five-day-forecast {
-  margin: 0 auto;
   font-size: 15px;
   justify-content: center;
-  padding-bottom: 30px;
-  padding-top: 50px;
-}
-strong {
-  font-size: 17px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  padding-top: 40px;
 }
 .little-circles {
   border: 2px solid;
   border-color: #ff895d;
   border-radius: 50%;
+  height: 150px;
   margin-left: 15px;
   margin-right: 15px;
   padding: 15px;
   text-align: center;
-  height: 150px;
   width: 150px;
 }
-.inner-circle {
-  width: 150px;
-}
-.low {
-  color: #007cb9;
-}
-.high {
-  color: #ff895d;
+.day {
+  font-size: 17px;
+  font-weight: bold;
 }
