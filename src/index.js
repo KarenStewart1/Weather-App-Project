@@ -67,6 +67,16 @@ function showWeatherConditions(response) {
   document.querySelector("#current-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  let weatherIconElement = document.querySelector("#weather-icon");
+  weatherIconElement.setAttribute(
+    "src",
+    `http://www.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIconElement.setAttribute("alt", response.data.weather[0].description);
   showHighLow(response);
 }
 function showHighLow(response) {
