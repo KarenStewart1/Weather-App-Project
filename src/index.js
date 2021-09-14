@@ -41,11 +41,9 @@ let currentDayAndTime = document.querySelector("#day-and-time");
 currentFullDate.innerHTML = formatFullDate(now);
 currentDayAndTime.innerHTML = formatDayAndTime(now);
 
-function weatherOnPageLoad() {
+function weatherOnPageLoad(city) {
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${
-    document.querySelector("#city-name-element").innerHTML
-  }&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
 }
 
@@ -80,9 +78,6 @@ function showWeatherConditions(response) {
     `http://www.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
-  showHighLow(response);
-}
-function showHighLow(response) {
   document.querySelector("#today-high").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -120,7 +115,8 @@ fahrenheitLink.addEventListener("click", getFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", goBackToCelcius);
+
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-weatherOnPageLoad();
+weatherOnPageLoad("Amsterdam");
