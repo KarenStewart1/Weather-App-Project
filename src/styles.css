@@ -40,6 +40,8 @@ h1 {
 }
 .today-weather-description {
   font-size: 20px;
+}
+.today-weather-description:first-letter {
   text-transform: capitalize;
 }
 .low {
