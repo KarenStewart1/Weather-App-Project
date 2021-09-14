@@ -75,7 +75,7 @@ function showWeatherConditions(response) {
   let weatherIconElement = document.querySelector("#weather-icon");
   weatherIconElement.setAttribute(
     "src",
-    `http://www.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://www.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#today-high").innerHTML = Math.round(
