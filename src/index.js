@@ -90,12 +90,16 @@ function getFahrenheitTemperature() {
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 function goBackToCelcius() {
   let cityName = document.querySelector("#city-name-element").innerHTML;
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
 
 function getCurrentTemperature(position) {

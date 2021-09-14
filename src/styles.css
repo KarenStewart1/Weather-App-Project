@@ -64,15 +64,13 @@ h2 {
 .cf-symbol {
   font-size: 22px;
 }
-.fahrenheit,
-.celsius {
+.cf-symbol a {
   color: #007cb9;
   padding: 0;
   text-decoration: none;
 }
-.fahrenheit:hover,
-.celsius:hover {
-  text-decoration: underline;
+.cf-symbol .active {
+  color: gray;
 }
 ul {
   list-style-type: none;
