@@ -53,8 +53,11 @@ function getCityName(event) {
   event.preventDefault();
   let citySearchInput = document.querySelector("#city-search-input").value;
   getCelciusTemperature(citySearchInput);
+  clearSearchInput();
 }
-
+function clearSearchInput() {
+  document.querySelector("#city-search-input").value = "";
+}
 function getCelciusTemperature(citySearchInput) {
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchInput}&units=metric&appid=${apiKey}`;
