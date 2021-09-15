@@ -49,8 +49,12 @@ function weatherOnPageLoad(city) {
 function getCityName(event) {
   event.preventDefault();
   let citySearchInput = document.querySelector("#city-search-input").value;
-  getCelciusTemperature(citySearchInput);
-  clearSearchInput();
+  if (citySearchInput === "") {
+    weatherOnPageLoad(document.querySelector("#city-name-element").innerHTML);
+  } else {
+    getCelciusTemperature(citySearchInput);
+    clearSearchInput();
+  }
 }
 function clearSearchInput() {
   document.querySelector("#city-search-input").value = "";
