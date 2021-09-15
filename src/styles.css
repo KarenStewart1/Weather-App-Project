@@ -1,13 +1,13 @@
 .weather-app {
-  margin-top: 20px auto;
-  max-width: 1200px;
+  margin: 0px auto;
+  width: 1100px;
 }
 .card {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
+  border-radius: 20px;
 }
 body {
-  margin: 70px;
-  max-width: 100%;
+  margin: 70px auto;
   font-family: "Open Sans", sans-serif;
 }
 h1 {
@@ -87,12 +87,21 @@ ul {
 .search-input-button {
   padding: 0;
 }
-.current-location-button {
+.current-location-button,
+.search-button {
   border-width: 1px;
-  border-radius: 2px;
-  color: -internal-light-dark(black, white);
+  color: #ffffff;
+  border-color: transparent;
+  background-color: #ffacac;
   padding-bottom: 2px;
   padding-top: 2px;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  transition: all 100ms ease-in-out;
+}
+.current-location-button:hover,
+.search-button:hover {
+  border-radius: 0;
 }
 .five-day-forecast {
   font-size: 15px;
