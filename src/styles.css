@@ -116,3 +116,7 @@ ul {
   font-size: 17px;
   font-weight: bold;
 }
+
+.forecast-description:first-letter {
+  text-transform: capitalize;
+}
