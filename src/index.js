@@ -81,12 +81,6 @@ function showWeatherConditions(response) {
     `https://www.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
-  document.querySelector("#today-high").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-  document.querySelector("#today-low").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
   getForecast(response.data.coord, "metric");
 }
 function getCurrentTemperature(position) {
@@ -161,7 +155,9 @@ function displayForecast(response) {
       forecastDay.weather[0].icon
     }@2x.png" alt="${
           forecastDay.weather[0].description
-        }" width="65" /> ${Math.round(forecastDay.temp.max)}°
+        }" width="65" /><span class="high"> ${Math.round(
+          forecastDay.temp.max
+        )}°</span>
     <div class="col low">${Math.round(forecastDay.temp.min)}°</div>
     </div>
     </div>
