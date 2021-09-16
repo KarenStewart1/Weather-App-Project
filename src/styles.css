@@ -1,3 +1,7 @@
+body {
+  margin: 70px auto;
+  font-family: "Open Sans", sans-serif;
+}
 .weather-app {
   margin: 0px auto;
   width: 1100px;
@@ -6,37 +10,43 @@
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
   border-radius: 20px;
 }
-body {
-  margin: 70px auto;
-  font-family: "Open Sans", sans-serif;
-}
 h1 {
   font-family: "Work Sans", sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
+}
+#city-name-element {
+  font-size: 35px;
 }
 .calender-day {
   text-align: right;
 }
 .day-and-time {
   font-weight: 200;
+  font-size: 25px;
 }
-.big-circle {
+.big-circle,
+.little-circles {
   border: 3px solid;
   border-color: #ff895d;
   border-radius: 50%;
+  text-align: center;
+}
+.big-circle {
   display: flex;
   height: 260px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 30px;
-  text-align: center;
+  padding-top: 35px;
   width: 330px;
 }
 .inner-circle {
   width: 150px;
   height: 180px;
+}
+.left-side {
+  padding-right: 0;
 }
 .today-weather-description {
   font-size: 20px;
@@ -46,16 +56,18 @@ h1 {
 }
 .low {
   color: #007cb9;
+  font-weight: 600;
 }
 .high {
   color: #ff895d;
+  font-weight: 600;
 }
 .right-side {
   padding-left: 0;
 }
 h2 {
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 #current-temperature {
   font-size: 52px;
@@ -111,15 +123,11 @@ ul {
   padding-top: 40px;
 }
 .little-circles {
-  border: 2px solid;
-  border-color: #ff895d;
-  border-radius: 50%;
-  height: 150px;
+  height: 155px;
   margin-left: 15px;
   margin-right: 15px;
   padding: 15px;
-  text-align: center;
-  width: 150px;
+  width: 155px;
 }
 .day {
   font-size: 17px;
