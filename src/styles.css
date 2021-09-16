@@ -1,6 +1,7 @@
 body {
   margin: 70px auto;
   font-family: "Open Sans", sans-serif;
+  background: #fefbf3;
 }
 .weather-app {
   margin: 0px auto;
@@ -9,6 +10,7 @@ body {
 .card {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
   border-radius: 20px;
+  background: #79b4b7;
 }
 h1 {
   font-family: "Work Sans", sans-serif;
@@ -28,7 +30,7 @@ h1 {
 .big-circle,
 .little-circles {
   border: 3px solid;
-  border-color: #ff895d;
+  border-color: #f8f0df;
   border-radius: 50%;
   text-align: center;
 }
@@ -55,11 +57,11 @@ h1 {
   text-transform: capitalize;
 }
 .low {
-  color: #007cb9;
+  color: #11324d;
   font-weight: 600;
 }
 .high {
-  color: #ff895d;
+  color: #11324d;
   font-weight: 600;
 }
 .right-side {
@@ -82,13 +84,14 @@ h2 {
   text-decoration: none;
 }
 .cf-symbol .active {
-  color: gray;
+  color: #c1cfc0;
+  cursor: default;
 }
 ul {
   list-style-type: none;
   font-size: 14px;
   padding-top: 25px;
-  color: grey;
+  color: #c1cfc0;
   padding-left: 30px;
   padding-top: 0;
   text-align: left;
