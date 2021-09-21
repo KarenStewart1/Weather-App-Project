@@ -160,7 +160,7 @@ function displayForecast(response) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 little-circles">
+        `<div class="col-2 daily-forecast">
     <span class="day">${formatForecastDate(forecastDay.dt)}</span>
     <div class="col forecast-description">${
       forecastDay.weather[0].description

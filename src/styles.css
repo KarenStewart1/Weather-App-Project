@@ -1,42 +1,40 @@
 body {
-  margin: 70px auto;
   font-family: "Open Sans", sans-serif;
   background: #dde8f8;
+  margin: 70px auto;
+  text-align: center;
 }
 .weather-app {
   margin: 0px auto;
   width: 950px;
 }
 .card {
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
-  border-radius: 35px;
   background: #ffffff;
+  border-radius: 35px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
 }
 h1 {
   font-family: "Work Sans", sans-serif;
-  font-size: 30px;
   font-weight: 600;
 }
 #city-name-element {
   font-size: 35px;
+  text-align: left;
 }
 .calender-day {
+  font-size: 30px;
   text-align: right;
 }
 .day-and-time {
-  font-weight: 200;
   font-size: 25px;
+  font-weight: 200;
 }
-.big-circle,
-.little-circles {
-  text-align: center;
-}
-.big-circle {
+.today-weather {
   height: 230px;
   margin: 0 auto;
   width: 380px;
 }
-.little-circles {
+.daily-forecast {
   border: solid 1px #ffffff;
   border-radius: 24px;
   margin-left: 15px;
@@ -44,24 +42,23 @@ h1 {
   padding: 10px 0 10px 0;
   transition: all 150ms ease-in-out;
 }
-.little-circles:hover {
+.daily-forecast:hover {
   border: solid 1px #f8f9fa;
   border-color: #dde8f8;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
 }
-.inner-circle {
-  width: 190px;
-}
 .left-side {
   padding-right: 0px;
+  width: 190px;
 }
 .today-weather-description {
-  font-size: 18px;
   color: #212529;
   font-family: "Work Sans", sans-serif;
+  font-size: 18px;
   font-weight: 550;
 }
-.today-weather-description:first-letter {
+.today-weather-description:first-letter,
+.forecast-description:first-letter {
   text-transform: capitalize;
 }
 .forecast-temperature {
@@ -75,6 +72,7 @@ h1 {
 .right-side {
   padding-left: 10px;
   padding-top: 10px;
+  width: 190px;
 }
 h2 {
   margin-bottom: 0;
@@ -92,7 +90,6 @@ h2 {
   font-size: 22px;
 }
 .cf-symbol a {
-  color: #0f83bdba;
   padding: 0;
   text-decoration: none;
 }
@@ -103,14 +100,11 @@ h2 {
 .cf-symbol .inactive {
   color: lightgrey;
 }
-
-.inner-circle ul {
+.right-side ul {
   list-style-type: none;
   font-size: 14px;
-  padding-top: 25px;
   color: #0f83bdba;
   padding-left: 20px;
-  padding-top: 0;
   text-align: left;
 }
 .search-buttons-bar {
@@ -145,10 +139,6 @@ h2 {
 .day {
   font-size: 17px;
   font-weight: bold;
-}
-
-.forecast-description:first-letter {
-  text-transform: capitalize;
 }
 .slash {
   font-weight: normal;
