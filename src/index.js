@@ -87,6 +87,9 @@ function getCurrentTemperature(position) {
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
+  document.querySelector("#wind-units").innerHTML = " m/s";
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
 function getCurrentLocation(event) {
   event.preventDefault();
