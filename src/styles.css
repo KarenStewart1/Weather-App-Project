@@ -97,9 +97,13 @@ h2 {
   text-decoration: none;
 }
 .cf-symbol .active {
-  color: lightgrey;
   cursor: default;
+  color: #212529;
 }
+.cf-symbol .inactive {
+  color: lightgrey;
+}
+
 .inner-circle ul {
   list-style-type: none;
   font-size: 14px;

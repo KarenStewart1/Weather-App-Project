@@ -51,6 +51,7 @@ function getCityName(event) {
   let citySearchInput = document.querySelector("#city-search-input").value;
   if (citySearchInput === "") {
     weatherOnPageLoad(document.querySelector("#city-name-element").innerHTML);
+    celsiusActive();
   } else {
     getCelciusTemperature(citySearchInput);
     clearSearchInput();
@@ -63,9 +64,7 @@ function getCelciusTemperature(citySearchInput) {
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearchInput}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
-  document.querySelector("#wind-units").innerHTML = " m/s";
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
+  celsiusActive();
 }
 function showWeatherConditions(response) {
   document.querySelector("#city-name-element").innerHTML = response.data.name;
@@ -90,9 +89,7 @@ function getCurrentTemperature(position) {
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
-  document.querySelector("#wind-units").innerHTML = " m/s";
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
+  celsiusActive();
 }
 function getCurrentLocation(event) {
   event.preventDefault();
@@ -104,18 +101,30 @@ function getFahrenheitTemperature() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
   axios.get(`${apiUrl}`).then(getCoordsForecast);
-  document.querySelector("#wind-units").innerHTML = " mph";
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
+  fahrenheitActive();
 }
 function goBackToCelcius() {
   let cityName = document.querySelector("#city-name-element").innerHTML;
   let apiKey = "b278ff04a20f686b021e62fb800cae6e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeatherConditions);
+  celsiusActive();
+}
+
+function celsiusActive() {
   document.querySelector("#wind-units").innerHTML = " m/s";
   fahrenheitLink.classList.remove("active");
+  fahrenheitLink.classList.add("inactive");
   celsiusLink.classList.add("active");
+  celsiusLink.classList.remove("inactive");
+}
+
+function fahrenheitActive() {
+  document.querySelector("#wind-units").innerHTML = " mph";
+  celsiusLink.classList.remove("active");
+  celsiusLink.classList.add("inactive");
+  fahrenheitLink.classList.add("active");
+  fahrenheitLink.classList.remove("inactive");
 }
 
 function formatForecastDate(timestamp) {
