@@ -45,7 +45,6 @@
                   />
                 </div>
               </div>
-
               <div class="row-1 inner-circle right-side">
                 <div class="col">
                   <h2>
@@ -56,6 +55,10 @@
                     >
                   </h2>
                   <ul>
+                    <li
+                      class="col today-weather-description"
+                      id="today-weather-description"
+                    ></li>
                     <li>Humidity: <span id="humidity"></span>%</li>
                     <li>
                       Wind: <span id="wind"></span
@@ -64,12 +67,7 @@
                   </ul>
                 </div>
               </div>
-              <div
-                class="col today-weather-description"
-                id="today-weather-description"
-              ></div>
             </div>
-            <br />
             <form id="city-search-form">
               <div class="row justify-content-md-center search-buttons-bar">
                 <div class="col col-lg-4 search-bar">
@@ -102,14 +100,14 @@
             <div class="row five-day-forecast" id="forecastWrapper"></div>
           </div>
         </div>
-        <p>
+        <small>
           <a
             href="https://github.com/KarenStewart1/Weather-App-Project.git"
             target="_blank"
             >Open-source code</a
           >
           by Karen Stewart
-        </p>
+        </small>
       </div>
     </div>
     <script src="src/index.js"></script>

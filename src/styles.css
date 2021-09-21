@@ -5,7 +5,7 @@ body {
 }
 .weather-app {
   margin: 0px auto;
-  width: 1000px;
+  width: 950px;
 }
 .card {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
@@ -29,29 +29,20 @@ h1 {
 }
 .big-circle,
 .little-circles {
-  border-radius: 24px;
   text-align: center;
 }
 .big-circle {
-  /* border: 1px solid; */
-  display: flex;
-  height: 260px;
+  height: 230px;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 0px;
-  padding-top: 35px;
   width: 370px;
 }
 .little-circles {
   border: solid 1px #ffffff;
-  /* #f8f9fa; */
-  height: 165px;
+  border-radius: 24px;
   margin-left: 15px;
   margin-right: 15px;
-  padding: 15px;
-  width: 150px;
+  padding: 10px 0 10px 0;
   transition: all 150ms ease-in-out;
-  /* box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%); */
 }
 .little-circles:hover {
   border: solid 1px #f8f9fa;
@@ -59,13 +50,14 @@ h1 {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
 }
 .inner-circle {
-  width: 170px;
+  width: 180px;
 }
 .left-side {
   padding-right: 0px;
 }
 .today-weather-description {
-  font-size: 25px;
+  font-size: 18px;
+  color: #212529;
   font-family: "Work Sans", sans-serif;
   font-weight: 550;
 }
@@ -81,11 +73,16 @@ h1 {
   font-weight: 600;
 }
 .right-side {
-  padding-left: 0px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 h2 {
   margin-bottom: 0;
   margin-top: 30px;
+}
+#weather-icon {
+  position: relative;
+  left: 25px;
 }
 #current-temperature {
   font-size: 52px;
@@ -95,25 +92,26 @@ h2 {
   font-size: 22px;
 }
 .cf-symbol a {
-  color: #007cb9;
+  color: #0f83bdba;
   padding: 0;
   text-decoration: none;
 }
 .cf-symbol .active {
-  color: #c1cfc0;
+  color: lightgrey;
   cursor: default;
 }
 .inner-circle ul {
   list-style-type: none;
   font-size: 14px;
   padding-top: 25px;
-  color: #138bc787;
-  padding-left: 30px;
+  color: #0f83bdba;
+  padding-left: 20px;
   padding-top: 0;
   text-align: left;
 }
 .search-buttons-bar {
   line-height: 1.9;
+  margin-left: 70px;
 }
 .search-input-button {
   padding: 0;
@@ -128,7 +126,7 @@ h2 {
   padding-top: 2px;
   border-radius: 7px;
   border-bottom-left-radius: 0;
-  transition: all 100ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .current-location-button:hover,
 .search-button:hover {
@@ -138,7 +136,6 @@ h2 {
   font-size: 15px;
   justify-content: center;
   margin: 0 auto;
-  padding-bottom: 10px;
   padding-top: 40px;
 }
 .day {
@@ -148,4 +145,7 @@ h2 {
 
 .forecast-description:first-letter {
   text-transform: capitalize;
+}
+.slash {
+  font-weight: normal;
 }
