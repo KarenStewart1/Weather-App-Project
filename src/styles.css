@@ -1,8 +1,7 @@
 body {
-  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  background: #cadefc;
   font-family: "Open Sans", sans-serif;
   margin: 70px auto;
-  text-align: center;
 }
 .weather-app {
   margin: 0px auto;
@@ -12,6 +11,7 @@ body {
   background: #ffffff;
   border-radius: 35px;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
+  text-align: center;
 }
 h1 {
   font-family: "Work Sans", sans-serif;
