@@ -34,7 +34,7 @@ h1 {
 .big-circle {
   height: 230px;
   margin: 0 auto;
-  width: 370px;
+  width: 380px;
 }
 .little-circles {
   border: solid 1px #ffffff;
@@ -50,7 +50,7 @@ h1 {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
 }
 .inner-circle {
-  width: 180px;
+  width: 190px;
 }
 .left-side {
   padding-right: 0px;
