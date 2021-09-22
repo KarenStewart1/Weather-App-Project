@@ -67,7 +67,9 @@ function getCelciusTemperature(citySearchInput) {
   celsiusActive();
 }
 function showWeatherConditions(response) {
-  document.querySelector("#city-name-element").innerHTML = response.data.name;
+  document.querySelector(
+    "#city-name-element"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#today-weather-description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#current-temperature").innerHTML = Math.round(
