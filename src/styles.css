@@ -47,6 +47,9 @@ h1 {
   border-color: #dde8f8;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
 }
+.forecast-icons {
+  padding: 10px 0 10px 0;
+}
 .left-side {
   padding-right: 0px;
   width: 190px;
@@ -70,8 +73,8 @@ h1 {
   font-weight: 600;
 }
 .right-side {
-  padding-left: 10px;
   padding-top: 10px;
+  padding-left: 0;
   width: 190px;
 }
 h2 {
@@ -80,7 +83,7 @@ h2 {
 }
 #weather-icon {
   position: relative;
-  left: 25px;
+  top: 45px;
 }
 #current-temperature {
   font-size: 52px;

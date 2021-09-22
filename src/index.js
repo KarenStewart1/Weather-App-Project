@@ -80,7 +80,7 @@ function showWeatherConditions(response) {
   let weatherIconElement = document.querySelector("#weather-icon");
   weatherIconElement.setAttribute(
     "src",
-    `https://www.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `images/${response.data.weather[0].icon}.png`
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord, "metric");
@@ -166,9 +166,10 @@ function displayForecast(response) {
       forecastDay.weather[0].description
     }</div>
     <div class="col">
-    <img src="https://openweathermap.org/img/wn/${
-      forecastDay.weather[0].icon
-    }@2x.png" alt="${forecastDay.weather[0].description}" width="65" />
+    <img src="images/${forecastDay.weather[0].icon}.png"
+     alt="${
+       forecastDay.weather[0].description
+     }" width="60" height="70" class="forecast-icons"/>
         <div class="forecast-temperature">
         ${Math.round(
           forecastDay.temp.max
