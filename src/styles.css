@@ -1,5 +1,9 @@
 body {
-  background: #cadefc;
+  background: linear-gradient(
+    91.3deg,
+    rgb(135, 174, 220) 1.5%,
+    rgb(255, 255, 255) 100.3%
+  );
   font-family: "Open Sans", sans-serif;
   margin: 70px auto;
 }
